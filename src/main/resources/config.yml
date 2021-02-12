@@ -1,0 +1,8 @@
+# Must be only 1 char
+staffchat_prefix: '.'
+
+# VARIABLES
+# {player} Gets replaced with playername
+# {msg} Gets replaced with message
+# {server} Server name where player is located
+staffchat_format: "§8[§cStaffChat§8][§c{server}§8] §7{player} §8§l>§r §f{msg}"

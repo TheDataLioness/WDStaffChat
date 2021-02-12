@@ -1,0 +1,4 @@
+name: "StaffChat"
+author: "DataLion"
+version: "1.0"
+main: "com.datalion.StaffChat"
