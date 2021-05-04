@@ -1,10 +1,9 @@
 package com.datalion;
 
-import dev.waterdog.event.defaults.PlayerChatEvent;
-import dev.waterdog.logger.Color;
-import dev.waterdog.player.ProxiedPlayer;
-import dev.waterdog.plugin.Plugin;
-import dev.waterdog.utils.Configuration;
+import dev.waterdog.waterdogpe.event.defaults.PlayerChatEvent;
+import dev.waterdog.waterdogpe.player.ProxiedPlayer;
+import dev.waterdog.waterdogpe.plugin.Plugin;
+import dev.waterdog.waterdogpe.utils.Configuration;
 
 public class StaffChat extends Plugin {
 
