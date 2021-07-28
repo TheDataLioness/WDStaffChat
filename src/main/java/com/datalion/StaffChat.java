@@ -3,7 +3,7 @@ package com.datalion;
 import dev.waterdog.waterdogpe.event.defaults.PlayerChatEvent;
 import dev.waterdog.waterdogpe.player.ProxiedPlayer;
 import dev.waterdog.waterdogpe.plugin.Plugin;
-import dev.waterdog.waterdogpe.utils.Configuration;
+import dev.waterdog.waterdogpe.utils.config.Configuration;
 
 public class StaffChat extends Plugin {
 
@@ -29,7 +29,7 @@ public class StaffChat extends Plugin {
             if(player.hasPermission("staffchat.send")){
                 event.setCancelled();
 
-                String completeMessage = staffChatFormat.replace("{player}", player.getName()).replace("{msg}", message.substring(1)).replace("{server}", player.getServer().getInfo().getServerName());
+                String completeMessage = staffChatFormat.replace("{player}", player.getName()).replace("{msg}", message.substring(1)).replace("{server}", player.getDownstream().getServerInfo().getServerName());
                 getLogger().info(completeMessage);
                 for (ProxiedPlayer proxiedPlayer : getProxy().getPlayers().values()) {
                     if(proxiedPlayer.hasPermission("staffchat.receive")) proxiedPlayer.sendMessage(completeMessage);
