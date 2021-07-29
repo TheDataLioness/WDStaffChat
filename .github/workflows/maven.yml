@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v2.2.4
       with:
         name: WDStaffChat
-        path: WDStaffChat/WDStaffChat-1.0.0.jar
+        path: /home/runner/work/WDStaffChat/WDStaffChat/target/StaffChat-1.0.1.jar
