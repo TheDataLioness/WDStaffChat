@@ -26,8 +26,15 @@ jobs:
     - name: "Build & test"
       run: |
         echo "done!"
-    - name: Upload
-      uses: actions/upload-artifact@v2.2.4
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: WDStaffChat
-        path: /home/runner/work/WDStaffChat/WDStaffChat/target/StaffChat-1.0.1.jar
+        tag_name: ${{ github.run_id }}
+        release_name: Auto Release ${{ github.run_id }}
+        body: |
+          Automatic release
+        draft: false
+        prerelease: false
