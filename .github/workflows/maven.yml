@@ -27,7 +27,7 @@ jobs:
       run: |
         echo "done!"
 
-    - uses: "TheDataLion/WDStaffChat"
+    - uses: "TheDataLion/WDStaffChat@1.0.1"
       with:
         repo_token: "${{ secrets.AUTH_TOKEN }}"
         prerelease: false
