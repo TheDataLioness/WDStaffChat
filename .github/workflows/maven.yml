@@ -32,11 +32,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        tag_name: latest
+        release_name: Latest Automatic release
         body: |
-          Changes in this Release
-          - First Change
-          - Second Change
+          Automatic release
         draft: false
         prerelease: false
