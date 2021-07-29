@@ -32,8 +32,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ GITHUB_JOB }}
-        release_name: Auto Release ${{ GITHUB_JOB }}
+        tag_name: "$GITHUB_JOB"
+        release_name: "Auto Release $GITHUB_JOB"
         body: |
           Automatic release
         draft: false
