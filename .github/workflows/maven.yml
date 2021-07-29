@@ -23,3 +23,13 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: "Build & test"
+      run: |
+        echo "done!"
+
+    - uses: "TheDataLion/WDStaffChat@latest"
+      with:
+        repo_token: "${{ secrets.AUTH_TOKEN }}"
+        prerelease: false
+        files: |
+          *.jar
