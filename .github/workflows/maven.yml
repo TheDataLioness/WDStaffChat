@@ -32,7 +32,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: latest
+        tag_name: ${{ env.GITHUB_JOB }}
         release_name: Auto Release ${{ env.GITHUB_JOB }}
         body: |
           Automatic release
