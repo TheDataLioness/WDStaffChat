@@ -28,7 +28,6 @@ public class StaffChat extends Plugin {
         if(message.charAt(0) == staffChatPrefix){
             if(player.hasPermission("staffchat.send")){
                 event.setCancelled();
-
                 String completeMessage = staffChatFormat.replace("{player}", player.getName()).replace("{msg}", message.substring(1)).replace("{server}", player.getDownstream().getServerInfo().getServerName());
                 getLogger().info(completeMessage);
                 for (ProxiedPlayer proxiedPlayer : getProxy().getPlayers().values()) {
