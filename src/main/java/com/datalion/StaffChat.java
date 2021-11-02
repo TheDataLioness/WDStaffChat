@@ -14,6 +14,7 @@ public class StaffChat extends Plugin {
     public void onEnable() {
         // Saving and getting config
         saveResource("config.yml");
+        loadConfig();
         Configuration cfg = getConfig();
         staffChatFormat = cfg.getString("staffchat_format");
         staffChatPrefix = cfg.getString("staffchat_prefix").charAt(0);
