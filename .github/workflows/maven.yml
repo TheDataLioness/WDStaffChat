@@ -32,7 +32,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        asset_path: ./target/WDStaffChat.jar
+        asset_path: ./WDStaffChat/target/WDStaffChat.jar
         asset_name: WDStaffChat.jar
         tag_name: ${{ github.run_id }}
         release_name: WDStaffChat [Auto] ${{ github.run_id }}
