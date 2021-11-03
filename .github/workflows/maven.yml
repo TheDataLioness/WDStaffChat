@@ -32,11 +32,18 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        asset_path: ./WDStaffChat/target/WDStaffChat.jar
-        asset_name: WDStaffChat.jar
         tag_name: ${{ github.run_id }}
         release_name: WDStaffChat [Auto] ${{ github.run_id }}
         body: |
           Automatic release
         draft: false
         prerelease: false
+    - name: Add release files
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.AUTH_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./WDStaffChat/target/WDStaffChat.jar
+        asset_name: WDStaffChat.jar
+        asset_content_type: application/zip
