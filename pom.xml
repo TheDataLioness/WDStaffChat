@@ -8,10 +8,20 @@
     <artifactId>StaffChat</artifactId>
     <version>1.0.1</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
     <repositories>
         <repository>
-            <id>waterdog-repo</id>
-            <url>https://repo.waterdog.dev/artifactory/main</url>
+            <id>waterdogpe-snapshots</id>
+            <url>https://repo.waterdog.dev/snapshots</url>
+        </repository>
+        <repository>
+            <id>waterdogpe-releases</id>
+            <url>https://repo.waterdog.dev/releases</url>
         </repository>
     </repositories>
 
@@ -19,7 +29,7 @@
         <dependency>
             <groupId>dev.waterdog.waterdogpe</groupId>
             <artifactId>waterdog</artifactId>
-            <version>1.1.2</version>
+            <version>2.0.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -30,8 +40,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>11</release>
-                    <encoding>UTF-8</encoding>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
             <plugin>
