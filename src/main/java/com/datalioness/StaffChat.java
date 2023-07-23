@@ -1,4 +1,4 @@
-package com.datalion;
+package com.datalioness;
 
 import dev.waterdog.waterdogpe.event.defaults.PlayerChatEvent;
 import dev.waterdog.waterdogpe.player.ProxiedPlayer;
